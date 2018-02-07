@@ -1765,8 +1765,8 @@ var ETH_UNITS = [
     'wei',
     'kwei',
     'Mwei',
-    'Gwei',
-    'szabo',
+    'Xiao',
+    'sand',
     'finney',
     'femtoether',
     'picoether',
@@ -1894,12 +1894,12 @@ var unitMap = {
     'Mwei':         '1000000',
     'lovelace':     '1000000',
     'picoether':    '1000000',
-    'gwei':         '1000000000',
-    'Gwei':         '1000000000',
+    'xiao':         '1000000000',
+    'Xiao':         '1000000000',
     'shannon':      '1000000000',
     'nanoether':    '1000000000',
     'nano':         '1000000000',
-    'szabo':        '1000000000000',
+    'sand':        '1000000000000',
     'microether':   '1000000000000',
     'micro':        '1000000000000',
     'finney':       '1000000000000000',
@@ -2144,8 +2144,8 @@ var getValueOfUnit = function (unit) {
  *   SI Short   SI Full        Effigy       Other
  * - kwei       femtoether     babbage
  * - mwei       picoether      lovelace
- * - gwei       nanoether      shannon      nano
- * - --         microether     szabo        micro
+ * - Xiao       nanoether      shannon      nano
+ * - --         microether     sand        micro
  * - --         milliether     finney       milli
  * - ether      --             --
  * - kether                    --           grand
@@ -2171,9 +2171,9 @@ var fromWei = function(number, unit) {
  *   SI Short   SI Full        Effigy       Other
  * - kwei       femtoether     babbage
  * - mwei       picoether      lovelace
- * - gwei       nanoether      shannon      nano
- * - --         microether     szabo        micro
- * - --         microether     szabo        micro
+ * - Xiao       nanoether      shannon      nano
+ * - --         microether     sand        micro
+ * - --         microether     sand        micro
  * - --         milliether     finney       milli
  * - ether      --             --
  * - kether                    --           grand
