@@ -20,4 +20,4 @@ import (
 	"math/big"
 )
 
-var BlockReward = big.NewInt(5e+18)
+var BlockReward = big.NewInt(2e+18)     //seems not used anywhere, real reward is defined in consensus\ethash\consensus.go  

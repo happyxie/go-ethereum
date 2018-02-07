@@ -36,11 +36,35 @@ import (
 
 // Ethash proof-of-work protocol constants.
 var (
-	FrontierBlockReward    *big.Int = big.NewInt(5e+18) // Block reward in wei for successfully mining a block
-	ByzantiumBlockReward   *big.Int = big.NewInt(3e+18) // Block reward in wei for successfully mining a block upward from Byzantium
+	HalvBlockInterval                = big.NewInt(200)
+	HalvBlockInterval2               = big.NewInt(400)
+	HalvBlockInterval4               = big.NewInt(800)
+	HalvBlockInterval5               = big.NewInt(1000)
+	HalvBlockInterval6               = big.NewInt(1200)
+	
+	FrontierBlockReward    *big.Int = big.NewInt(2e+18) // Block reward in wei for successfully mining a block
+	ByzantiumBlockReward   *big.Int = big.NewInt(2e+18) // Block reward in wei for successfully mining a block upward from Byzantium
 	maxUncles                       = 2                 // Maximum number of uncles allowed in a single block
 	allowedFutureBlockTime          = 15 * time.Second  // Max time from current time allowed for blocks, before they're considered future blocks
+
 )
+
+func calcBlockReward(num *big.Int) *big.Int {
+	switch {
+	case num.Cmp(HalvBlockInterval)<=0: 
+		return big.NewInt(2e+18)
+	case num.Cmp(HalvBlockInterval2)<=0:
+		return big.NewInt(1e+18)
+	case num.Cmp(HalvBlockInterval4)<=0:
+		return big.NewInt(5e+17)
+	case num.Cmp(HalvBlockInterval5)<=0:
+		return big.NewInt(25e+16)
+	case num.Cmp(HalvBlockInterval6)<=0:
+		return big.NewInt(125e+15)		
+	default:
+		return big.NewInt(1e+17)		
+	}
+}
 
 // Various error messages to mark blocks invalid. These should be private to
 // prevent engine specific errors from being referenced in the remainder of the
@@ -539,10 +563,11 @@ var (
 // included uncles. The coinbase of each uncle block is also rewarded.
 func accumulateRewards(config *params.ChainConfig, state *state.StateDB, header *types.Header, uncles []*types.Header) {
 	// Select the correct block reward based on chain progression
-	blockReward := FrontierBlockReward
-	if config.IsByzantium(header.Number) {
-		blockReward = ByzantiumBlockReward
-	}
+//	blockReward := FrontierBlockReward
+//	if config.IsByzantium(header.Number) {
+//		blockReward = ByzantiumBlockReward
+//	}
+	blockReward := calcBlockReward(header.Number)
 	// Accumulate the rewards for the miner and any included uncles
 	reward := new(big.Int).Set(blockReward)
 	r := new(big.Int)
