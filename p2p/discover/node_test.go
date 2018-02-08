@@ -28,8 +28,8 @@ import (
 	"testing/quick"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/crypto"
+	"github.com/happyxie/go-ethereum/common"
+	"github.com/happyxie/go-ethereum/crypto"
 )
 
 func ExampleNewNode() {

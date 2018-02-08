@@ -18,11 +18,11 @@
 package consensus
 
 import (
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/params"
-	"github.com/ethereum/go-ethereum/rpc"
+	"github.com/happyxie/go-ethereum/common"
+	"github.com/happyxie/go-ethereum/core/state"
+	"github.com/happyxie/go-ethereum/core/types"
+	"github.com/happyxie/go-ethereum/params"
+	"github.com/happyxie/go-ethereum/rpc"
 	"math/big"
 )
 

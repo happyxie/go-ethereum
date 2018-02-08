@@ -22,13 +22,13 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/consensus"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/light"
-	"github.com/ethereum/go-ethereum/log"
+	"github.com/happyxie/go-ethereum/common"
+	"github.com/happyxie/go-ethereum/common/mclock"
+	"github.com/happyxie/go-ethereum/consensus"
+	"github.com/happyxie/go-ethereum/core"
+	"github.com/happyxie/go-ethereum/core/types"
+	"github.com/happyxie/go-ethereum/light"
+	"github.com/happyxie/go-ethereum/log"
 )
 
 const (

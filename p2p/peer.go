@@ -24,11 +24,11 @@ import (
 	"sync"
 	"time"
 
-	"github.com/ethereum/go-ethereum/common/mclock"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/p2p/discover"
-	"github.com/ethereum/go-ethereum/rlp"
+	"github.com/happyxie/go-ethereum/common/mclock"
+	"github.com/happyxie/go-ethereum/event"
+	"github.com/happyxie/go-ethereum/log"
+	"github.com/happyxie/go-ethereum/p2p/discover"
+	"github.com/happyxie/go-ethereum/rlp"
 )
 
 const (

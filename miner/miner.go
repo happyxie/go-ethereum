@@ -21,17 +21,17 @@ import (
 	"fmt"
 	"sync/atomic"
 
-	"github.com/ethereum/go-ethereum/accounts"
-	"github.com/ethereum/go-ethereum/common"
-	"github.com/ethereum/go-ethereum/consensus"
-	"github.com/ethereum/go-ethereum/core"
-	"github.com/ethereum/go-ethereum/core/state"
-	"github.com/ethereum/go-ethereum/core/types"
-	"github.com/ethereum/go-ethereum/eth/downloader"
-	"github.com/ethereum/go-ethereum/ethdb"
-	"github.com/ethereum/go-ethereum/event"
-	"github.com/ethereum/go-ethereum/log"
-	"github.com/ethereum/go-ethereum/params"
+	"github.com/happyxie/go-ethereum/accounts"
+	"github.com/happyxie/go-ethereum/common"
+	"github.com/happyxie/go-ethereum/consensus"
+	"github.com/happyxie/go-ethereum/core"
+	"github.com/happyxie/go-ethereum/core/state"
+	"github.com/happyxie/go-ethereum/core/types"
+	"github.com/happyxie/go-ethereum/eth/downloader"
+	"github.com/happyxie/go-ethereum/ethdb"
+	"github.com/happyxie/go-ethereum/event"
+	"github.com/happyxie/go-ethereum/log"
+	"github.com/happyxie/go-ethereum/params"
 )
 
 // Backend wraps all methods required for mining.
